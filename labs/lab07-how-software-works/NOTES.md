@@ -1,0 +1,6 @@
+# Lab 7 - what compiled actually means
+1. The extra step in the compiled path, and what it produces: The extra step is compilation using a compiler like clang, which produces a standalone machine-code binary rather than leaving the script as plain text.
+2. Which path is faster at runtime, and why: The compiled path is dramatically faster at runtime because the CPU executes native machine code directly without paying the continuous type-checking and translation overhead of an interpreter.
+3. When the speed difference is worth caring about, and when it is not: The speed difference matters for long loops or heavy math calculations like our 100 million iteration loop, but it does not matter for simple operations that finish instantly anyway.
+4. What python3 actually is: The python3 program is an executable compiled binary that acts as a translator, reading our human-readable script as input data to run it line by line.
+5. Why the compiler could simplify f(x) and the interpreter did not: The compiler processes the program ahead of time and can optimize static values like rewriting 1+1 to 2 once, whereas an interpreter must parse and process the literal text operations exactly as written while the program is actively running.

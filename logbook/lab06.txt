@@ -1,0 +1,17 @@
+LAB 6 LOGBOOK - Sharon Robinson - 2008
+SETUP: my working directory is ~/nst/labs/lab06-os-and-filesystem
+T1 prediction: I think ls / will show about 20 items ls/
+T1: /bin holds core system command binaries like ls and cat
+T1: /dev holds hardware and system resources pretending to be files
+T1: / means the root directory , ~ means the user home directory , . means the current directory
+T1: the OS groups files by purpose or function
+T2 prediction: ./deploy will fail because it lacks execute permission
+T2 prediction: appending after u-w will fail because write permission is removed
+T2: -rw-r--r-- written in numbers is 644
+T2: ./deploy failed at first because it lacked execute permission (x)
+T2: the new policy needed chmod 750
+-r-xr-x---  1 robsmac  staff  36  8 Sep 13:41 deploy
+T3 prediction: ./nst-info will fail because it does not have execute permission yet
+T3 prediction: adding .py to the name will change nothing about how it runs
+T3: python3 nst-info worked but ./nst-info failed because python3 reads it as text input while the shell requires execute permission to run it directly
+T3: renaming the file to .py changed nothing about how the kernel executes it
